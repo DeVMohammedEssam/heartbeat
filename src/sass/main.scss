@@ -1,0 +1,14 @@
+/* base */
+@import "./base/vars";
+@import "./base/settings";
+@import "./base/typography";
+
+/* layout */
+@import "./layout/navbar";
+@import "./layout/buttons";
+
+/* pages */
+@import "./pages/home";
+
+/* vendors */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

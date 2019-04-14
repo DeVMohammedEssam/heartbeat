@@ -1,0 +1,55 @@
+.home {
+    height: 100vh;
+    position: relative;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: $navbarPadding*2;
+    border-radius: $homeBorderRadius $homeBorderRadius 0 0;
+    overflow: hidden;
+
+
+    &__cover {
+        background-image: url("/images/home-cover.jpg");
+        background-size: cover;
+        background-position: top;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__heart-logo-container {
+        margin: $homeLogoMargin 0;
+    }
+
+    &__heart-logo-subtitle {
+        font-size: $midFont;
+        margin-left: $margin-sm;
+
+    }
+
+
+    &__right-widget-container {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: $white;
+        width: 5rem;
+        height: 20rem;
+        border-radius: $homeWidgetBorderRadius 0 0 $homeWidgetBorderRadius;
+
+    }
+
+    &__checknow-logo-container {
+        margin-bottom: -$margin-lg;
+        margin-top: $margin-lg;
+
+    }
+}
