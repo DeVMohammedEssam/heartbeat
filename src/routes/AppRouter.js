@@ -14,7 +14,7 @@ const AppRouter = () => {
         <React.Fragment>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <    path="/analyze" component={Analyze} />
+                <ProtectedRoute path="/analyze" component={Analyze} />
                 <ProtectedRoute path="/history" component={History} />
                 <ProtectedRoute path="/notifications" component={Notifications} />
                 <ProtectedRoute path="/analysis" component={Analysis} />
