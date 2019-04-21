@@ -1,0 +1,45 @@
+/* start of media query */
+@mixin mediaQuery($screen:'', $min:0, $max:0, $fixed:true) {
+
+    //required vars must be at first
+    @if $fixed {
+
+        @if $screen=='sm' {
+            @media (max-width: 576px) {
+                @content;
+            }
+        }
+
+
+        @else if $screen=='md' {
+            @media (max-width: 768px) {
+                @content;
+            }
+        }
+
+        @else if $screen=='lg' {
+            @media (max-width: 992px) {
+                @content;
+            }
+        }
+
+        @else if $screen=='xl' {
+            @media (max-width: 1200px) {
+                @content;
+            }
+        }
+
+        @else if $screen=='xxl' {
+            @media (min-width: 1200px) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @media (min-width: $min) and (max-width:$max) {
+            @content
+        }
+    }
+
+}

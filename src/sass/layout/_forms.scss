@@ -1,0 +1,43 @@
+.sign-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+        url("/images/sign-cover.jpg");
+    background-position: top;
+    background-size: cover;
+
+    &__inputs-container {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        min-width: 30rem;
+        width: 30%;
+        background: $white;
+        border-radius: 5rem 0;
+        box-shadow: 0 0.5rem 0.8rem rgba(#000, 0.5);
+    }
+
+    input {
+        margin-bottom: 1rem;
+    }
+
+    .btns-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+
+    input[type='submit'] {
+        width: 10rem;
+
+        border-radius: 1rem;
+        align-self: flex-end;
+    }
+
+    .return-home {
+        color: $lightBlue;
+    }
+}

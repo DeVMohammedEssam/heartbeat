@@ -1,17 +1,30 @@
 /* colors */
 $blue:#385399;
+$lightBlue:#0EC2F1;
+$success:#18C1AA;
+$danger : #e62a2a;
 $darkGrey:#8F8F8F;
-$white:#FFFFFF;
+$midGrey: #DDD;
 $lightGrey:#efefef;
+$white:#FFFFFF;
+$overlay--blue:rgba($blue, 0.5);
+
 
 /* dimentions */
 $margin-sm:1.5rem;
 $margin-lg:5rem;
 $navbarPadding:10%;
+$pagesVh:92vh;
+$navVh: 8vh;
 
+$borderRadius-lg:3rem;
 /* fontSizes */
 $midFont: 3rem;
-/*home*/
+/*home page*/
 $homeBorderRadius:2rem;
-$homeWidgetBorderRadius:1rem;
+$homeWidgetBorderRadius:2rem;
 $homeLogoMargin:3rem;
+$checknowPadding:1rem;
+
+/* analyze page */
+$analyzePagePadding:10%;

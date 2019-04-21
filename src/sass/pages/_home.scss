@@ -1,5 +1,5 @@
 .home {
-    height: 100vh;
+    height: $pagesVh;
     position: relative;
     color: $white;
     display: flex;
@@ -12,8 +12,7 @@
 
 
     &__cover {
-        background-image: url("/images/home-cover.jpg");
-        background-size: cover;
+        background-image: linear-gradient(45deg, $overlay--blue, darken($overlay--blue, 10%)), url("/images/home-cover.png");
         background-position: top;
         height: 100%;
         width: 100%;
@@ -23,9 +22,7 @@
         left: 0;
     }
 
-    &__heart-logo-container {
-        margin: $homeLogoMargin 0;
-    }
+
 
     &__heart-logo-subtitle {
         font-size: $midFont;
@@ -42,14 +39,41 @@
         margin: auto;
         background: $white;
         width: 5rem;
-        height: 20rem;
+        height: 25rem;
+        padding: 1rem 3rem;
         border-radius: $homeWidgetBorderRadius 0 0 $homeWidgetBorderRadius;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
 
     }
 
     &__checknow-logo-container {
-        margin-bottom: -$margin-lg;
-        margin-top: $margin-lg;
+        margin-bottom: -$homeLogoMargin;
+        margin-top: $homeLogoMargin;
+        min-width: 15rem;
+        min-height: 15rem;
+        flex-basis: 20rem;
+        padding: $checknowPadding;
+        border-radius: 50%;
+        background: $blue;
+        position: relative;
 
+        span {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 23%;
+            font-weight: 700;
+        }
+
+    }
+
+    &__checknow-logo {
+        position: absolute;
+        top: 0;
+        bottom: 3rem;
+        margin: auto;
+        left: 27%;
     }
 }

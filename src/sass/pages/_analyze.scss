@@ -1,0 +1,83 @@
+.analyze {
+    padding: ($analyzePagePadding / 3) $analyzePagePadding;
+    justify-content: center;
+    min-height: 600px;
+
+    &__check-title {
+        color: $darkGrey;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: $blue;
+            width: 10rem;
+            height: 0.3rem;
+            margin-top: 1rem;
+
+        }
+    }
+
+    &__check-form,
+    &__note,
+    &__note-bottom,
+    &__loader {
+        background: $white;
+        border-radius: $borderRadius-lg;
+        padding: 3rem !important;
+    }
+
+    &__loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__check-form {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
+
+        @include mediaQuery("lg") {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__inputs-container {
+        padding: 5rem 12%;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        width: 49%;
+        margin-bottom: 2rem;
+
+        @include mediaQuery("lg") {
+            @media (max-width: 762px) {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__note {
+        margin-bottom: 1rem;
+        max-height: 30rem;
+        overflow: auto;
+    }
+
+    &__note-bottom {
+        max-height: 20rem;
+        overflow: auto;
+    }
+
+    &__analye-btn {
+        min-width: 20rem;
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+    }
+
+}

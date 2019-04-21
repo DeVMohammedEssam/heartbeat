@@ -1,0 +1,9 @@
+.flash-message {
+    position: absolute !important;
+    top: 5rem;
+    z-index: 1000;
+
+    width: 80%;
+    text-align: center;
+    animation: fadeout 2s ease 0s 1 normal forwards;
+}

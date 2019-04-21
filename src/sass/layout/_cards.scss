@@ -1,0 +1,65 @@
+.result-card {
+    background-color: $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    border-radius: 1rem;
+    max-width: 20rem;
+    min-width: 20rem;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__status {
+        float: left;
+        display: block;
+
+        &--success {
+            color: $success;
+        }
+
+        &--fali {
+            color: $danger;
+        }
+
+    }
+
+    &__vertical-line {
+        width: 0.1rem;
+        display: block;
+        height: 90%;
+    }
+
+    &__date {
+        color: $darkGrey;
+    }
+}
+
+.notification-card {
+    background-color: $white;
+    padding: 1.3rem 5rem;
+    border-radius: 1rem;
+    color: $darkGrey;
+
+
+    &__sender {
+        position: relative;
+        margin-right: 2rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1rem;
+            margin: auto;
+            height: 3rem;
+            width: 0.1rem;
+            background: $midGrey;
+            display: inline-block;
+        }
+    }
+
+}

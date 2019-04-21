@@ -1,0 +1,45 @@
+.history {
+    padding: $navbarPadding/3 $navbarPadding;
+
+    &__title {
+        color: $darkGrey;
+
+        &::after {
+            content: "";
+            height: 0.3rem;
+            width: 5rem;
+            display: block;
+            margin-top: 1rem;
+            background: $blue;
+        }
+    }
+
+    &__left-widget {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__readings {
+        background-color: $white;
+        padding: 6rem;
+        border-radius: $borderRadius-lg;
+
+        .reading {
+            border-bottom: 1px solid $darkGrey;
+            padding: 1rem;
+
+            &:first-child {
+                border-top: 0.1rem solid $darkGrey;
+            }
+
+            &__text {
+                margin-right: 10rem;
+                color: $darkGrey;
+            }
+        }
+
+    }
+}

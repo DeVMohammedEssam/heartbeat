@@ -1,0 +1,16 @@
+.custom-input {
+    border: 0.15rem solid darken($lightGrey, 5%);
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+::placeholder {
+    color: $midGrey;
+    opacity: 1;
+
+}

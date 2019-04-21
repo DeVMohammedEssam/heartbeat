@@ -2,7 +2,8 @@
 .custom-navbar {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: $navVh;
+    min-height: 5rem;
     width: 100vw;
     padding: 0 $navbarPadding;
     background-color: $white;
@@ -57,6 +58,43 @@
 
         &:last-of-type {
             margin-left: $margin-sm;
+        }
+    }
+
+    &__signed-container {
+        display: flex;
+
+        .info {
+            position: relative;
+            margin-left: 3rem;
+
+            .logout {
+                position: absolute;
+                bottom: -1.5rem;
+                right: 0;
+            }
+        }
+    }
+
+    &__page-title {
+        color: $midGrey;
+        margin-right: 1rem;
+
+        span {
+            margin: 0 0.5rem;
+        }
+    }
+
+    &__notification {
+        color: $darkGrey;
+        position: relative;
+
+        span {
+            position: absolute;
+            color: $white;
+            background: $lightBlue;
+            left: 0.5rem;
+            top: -0.6rem;
         }
     }
 }

@@ -1,14 +1,26 @@
 /* base */
+@import "./base/mixins";
 @import "./base/vars";
 @import "./base/settings";
 @import "./base/typography";
-
+@import "./base/animations";
+/* components */
+@import "./components/flashMessages";
 /* layout */
 @import "./layout/navbar";
 @import "./layout/buttons";
-
+@import "./layout/inputs";
+@import "./layout/loaders";
+@import "./layout/cards";
+@import "./layout/forms";
 /* pages */
 @import "./pages/home";
+@import "./pages/analyze";
+@import "./pages/history";
+@import "./pages/notifications";
+@import "./pages/analysis";
+@import "./pages/broadcast";
+@import "./pages/pageNotFound";
 
 /* vendors */
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
