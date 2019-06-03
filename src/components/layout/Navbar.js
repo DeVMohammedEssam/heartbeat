@@ -11,6 +11,7 @@ class Navbar extends Component {
         this.props.dispatch(logout());
         this.props.history.push("/");
     }
+
     render() {
         return (
             <nav className="custom-navbar" >
@@ -26,9 +27,24 @@ class Navbar extends Component {
                     {
                         this.state.isSignedIn ? (
                             <div className="custom-navbar__signed-container">
-                                <span className="custom-navbar__page-title">
-                                    title<span>|</span>title
-                                </span>
+                                {this.props.user.type === 0 && (
+                                    /* is patient */
+                                    <span className="custom-navbar__page-title">
+                                        <Link to="/history">History </Link>
+                                    </span>
+                                )}
+                                {this.props.user.type === 1 && (
+                                    /*  is doctor */
+                                    <React.Fragment>
+                                        <span className="custom-navbar__page-title">
+                                            <Link to="/Analysis">History </Link>
+                                        </span>
+                                        <span className="custom-navbar__page-title">
+                                            <Link to="/broadcast">broadcast </Link>
+                                        </span>
+                                    </React.Fragment>
+                                )}
+
 
                                 <div class="dropdown">
                                     <button class="btn  dropdown-toggle custom-navbar__notification" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,6 +55,9 @@ class Navbar extends Component {
                                         <a class="dropdown-item" href="#">notification 1</a>
                                         <a class="dropdown-item" href="#">notification 2</a>
                                         <a class="dropdown-item" href="#">notification 3</a>
+                                        <div className="text-center">
+                                            <Link to="/notification">See more</Link>
+                                        </div>
                                     </div>
                                 </div>
 
