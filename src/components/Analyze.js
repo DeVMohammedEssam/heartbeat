@@ -3,13 +3,31 @@ import Navbar from './layout/Navbar';
 import HeartLoader from "./layout/HeartLoader";
 class Analyze extends Component {
     state = {
-        analyzeClicked: false
+        analyzeClicked: false,
+        data: {
+            age: "",
+            sex: "male",
+            cp: "",
+            trestbps: "",
+            chol: "",
+            fbs: "",
+            restecg: "",
+            thalach: "",
+            exang: "",
+            oldpeak: "",
+            slope: "",
+            ca: "",
+            thal: ""
+        }
     }
     handleSubmit = (e) => {
-
         e.preventDefault();
         this.setState(() => ({ analyzeClicked: true }));//show loader
 
+    }
+    handleChange = (e) => {
+        const { name, value } = e.target;
+        this.setState(() => ({ data: { ...this.state.data, [name]: value } }))
     }
     render() {
         return (
@@ -26,19 +44,22 @@ class Analyze extends Component {
                             <form className="analyze__check-form col-12 col-lg-8 " onSubmit={this.handleSubmit}>
                                 <h4 className="analyze__check-title">check your heart</h4>
                                 <div className="analyze__inputs-container ">
-                                    <input type="text" className="analyze__input custom-input " placeholder="age" name="age" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="sex" name="sex" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="cp" name="cp" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="trestbps" name="trestbps" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="chol" name="chol" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="fbs" name="fbs" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="restecg" name="restecg" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="thalach" name="thalach" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="exang" name="exang" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="oldpeak" name="oldpeak" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="slope" name="slope" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="ca" name="ca" />
-                                    <input type="text" className="analyze__input custom-input " placeholder="thal" name="thal" />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="age" name="age" value={this.state.data.age} />
+                                    <select type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="sex" name="sex" defaultValue={this.state.data.sex}>
+                                        <option value="male">male</option>
+                                        <option value="female">female</option>
+                                    </select>
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="cp" name="cp" value={this.state.data.cp} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="trestbps" name="trestbps" value={this.state.data.trestbps} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="chol" name="chol" value={this.state.data.chol} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="fbs" name="fbs" value={this.state.data.fbs} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="restecg" name="restecg" value={this.state.data.restecg} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="thalach" name="thalach" value={this.state.data.thalach} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="exang" name="exang" value={this.state.data.exang} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="oldpeak" name="oldpeak" value={this.state.data.oldpeak} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="slope" name="slope" value={this.state.data.slope} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="ca" name="ca" value={this.state.data.ca} />
+                                    <input type="number" className="analyze__input custom-input " onChange={this.handleChange} placeholder="thal" name="thal" value={this.state.data.thal} />
                                 </div>
 
                                 <input type="submit" value="Analyize Now" className=" analyze__analye-btn custom-btn custom-btn--lightBlue" />

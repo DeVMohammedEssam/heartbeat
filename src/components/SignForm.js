@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { login } from "../redux/actions/user";
 import axios from "axios";
 
-class SignForm extends Component {
+export class SignForm extends Component {
     state = {
         data: {
             email: "",

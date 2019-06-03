@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render analysis page correctly 1`] = `
+<Fragment>
+  <ConnectFunction />
+  <section
+    className="analysis"
+  >
+    <h3
+      className="analysis__title"
+    >
+      Analysis
+    </h3>
+    <div
+      className="analysis__cards-container"
+    >
+      <div
+        className="analysis__card"
+      >
+        <div
+          className="analysis__card__icon-container"
+        >
+          <img
+            alt=""
+            src="/images/users-group.png"
+          />
+        </div>
+        <div
+          className="analysis__card__number"
+        >
+          25,22l
+        </div>
+      </div>
+      <div
+        className="analysis__card"
+      >
+        <div
+          className="analysis__card__icon-container"
+        >
+          <img
+            alt=""
+            src="/images/patient.png"
+          />
+        </div>
+        <div
+          className="analysis__card__number"
+        >
+          25,22l
+        </div>
+      </div>
+      <div
+        className="analysis__card"
+      >
+        <div
+          className="analysis__card__icon-container"
+        >
+          <img
+            alt=""
+            src="/images/verified.png"
+          />
+        </div>
+        <div
+          className="analysis__card__number"
+        >
+          25,22l
+        </div>
+      </div>
+    </div>
+  </section>
+</Fragment>
+`;

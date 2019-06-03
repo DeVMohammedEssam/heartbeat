@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render sign in form when making sign prop equal in 1`] = `
+<div>
+  <form
+    className="sign-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="sign-form__inputs-container "
+    >
+      <input
+        className="custom-input"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="password"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <div
+        className="btns-wrapper"
+      >
+        <Link
+          className="return-home"
+          to="/"
+        >
+          <i />
+          <span>
+            retrun to home
+          </span>
+        </Link>
+        <input
+          className="custom-btn custom-btn--lightBlue"
+          type="submit"
+          value="sign in"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should render sign up form when making sign prop equal up 1`] = `
+<div>
+  <form
+    className="sign-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="sign-form__inputs-container "
+    >
+      <input
+        className="custom-input"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="password"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="name"
+        onChange={[Function]}
+        placeholder="Name"
+        required={true}
+        type="name"
+        value=""
+      />
+      <select
+        className="custom-input"
+        defaultValue="0"
+        name="type"
+        onChange={[Function]}
+      >
+        <option
+          value="0"
+        >
+          Patient
+        </option>
+        <option
+          value="1"
+        >
+          Doctor
+        </option>
+      </select>
+      <div
+        className="btns-wrapper"
+      >
+        <Link
+          className="return-home"
+          to="/"
+        >
+          <i />
+          <span>
+            retrun to home
+          </span>
+        </Link>
+        <input
+          className="custom-btn custom-btn--lightBlue"
+          type="submit"
+          value="sign up"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+`;

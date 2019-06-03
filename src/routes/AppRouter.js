@@ -14,11 +14,11 @@ const AppRouter = () => {
         <React.Fragment>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <ProtectedRoute path="/analyze" component={Analyze} />
+                <Route path="/analyze" component={Analyze} />
                 <ProtectedRoute path="/history" component={History} />
                 <ProtectedRoute path="/notifications" component={Notifications} />
                 <ProtectedRoute path="/analysis" component={Analysis} />
-                <ProtectedRoute path="/broadcast" component={BroadCast} />
+                <Route path="/broadcast" component={BroadCast} />
                 <Route path="/signin" render={() => (<SignForm sign="in" />)} />
                 <Route path="/signup" render={() => (<SignForm sign="up" />)} />
                 <Route component={PageNotFound} />

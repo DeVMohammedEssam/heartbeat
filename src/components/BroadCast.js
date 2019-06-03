@@ -2,12 +2,24 @@ import React, { Component } from 'react';
 import Navbar from "./layout/Navbar";
 class BroadCast extends Component {
     state = {
-        sendNowClicked: false
+        sendNowClicked: false,
+        broadcast: {
+            message: "",
+            sendTo: "patients"
+        }
     }
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState(() => ({ sendNowClicked: true }));
-        setTimeout(()=> this.setState(()=>({sendNowClicked:false})),2000);
+        setTimeout(() => this.setState(() => ({ sendNowClicked: false })), 2000);
+    }
+    handleChange = (e) => {
+        const { name, value } = e.target;
+        this.setState({
+            broadcast: {
+                ...this.state.broadcast, [name]: value
+            }
+        })
     }
     render() {
         return (
@@ -17,7 +29,7 @@ class BroadCast extends Component {
                     <h3 className="broadcast__title">Broadcast</h3>
                     <div className="broadcast__content">
                         <div className="broadcast__textbox">
-                            <textarea className="custom-input" name="broadcast-message" placeholder="Send message"></textarea>
+                            <textarea className="custom-input" name="message" placeholder="Send message" onChange={this.handleChange} value={this.state.broadcast.message}></textarea>
                             {this.state.sendNowClicked && (
                                 <span className="done-image-container"></span>
                             )}
@@ -25,7 +37,7 @@ class BroadCast extends Component {
                         <div className="broadcast__send-to ">
                             <div className="wrapper">
 
-                                <select name="sentTo" className=" custom-btn btn--darkGrey">
+                                <select name="sendTo" className=" custom-btn btn--darkGrey" onChange={this.handleChange} defaultValue={this.state.broadcast.sendTo}>
                                     <option value="patients">patients</option>
                                     <option value="doctors">doctors</option>
                                 </select>

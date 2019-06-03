@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render analyze page correctly before and after submition  1`] = `
+<Fragment>
+  <ConnectFunction />
+  <div
+    className="analyze row"
+  >
+    <form
+      className="analyze__check-form col-12 col-lg-8 "
+      onSubmit={[Function]}
+    >
+      <h4
+        className="analyze__check-title"
+      >
+        check your heart
+      </h4>
+      <div
+        className="analyze__inputs-container "
+      >
+        <input
+          className="analyze__input custom-input "
+          name="age"
+          onChange={[Function]}
+          placeholder="age"
+          type="number"
+          value=""
+        />
+        <select
+          className="analyze__input custom-input "
+          defaultValue="male"
+          name="sex"
+          onChange={[Function]}
+          placeholder="sex"
+          type="number"
+        >
+          <option
+            value="male"
+          >
+            male
+          </option>
+          <option
+            value="female"
+          >
+            female
+          </option>
+        </select>
+        <input
+          className="analyze__input custom-input "
+          name="cp"
+          onChange={[Function]}
+          placeholder="cp"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="trestbps"
+          onChange={[Function]}
+          placeholder="trestbps"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="chol"
+          onChange={[Function]}
+          placeholder="chol"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="fbs"
+          onChange={[Function]}
+          placeholder="fbs"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="restecg"
+          onChange={[Function]}
+          placeholder="restecg"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="thalach"
+          onChange={[Function]}
+          placeholder="thalach"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="exang"
+          onChange={[Function]}
+          placeholder="exang"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="oldpeak"
+          onChange={[Function]}
+          placeholder="oldpeak"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="slope"
+          onChange={[Function]}
+          placeholder="slope"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="ca"
+          onChange={[Function]}
+          placeholder="ca"
+          type="number"
+          value=""
+        />
+        <input
+          className="analyze__input custom-input "
+          name="thal"
+          onChange={[Function]}
+          placeholder="thal"
+          type="number"
+          value=""
+        />
+      </div>
+      <input
+        className=" analyze__analye-btn custom-btn custom-btn--lightBlue"
+        type="submit"
+        value="Analyize Now"
+      />
+    </form>
+    <div
+      className=" col-12  col-lg-3"
+    >
+      <aside
+        className="analyze__note"
+      >
+        <p
+          className="analyze__note__text"
+        >
+           adi cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+          sasperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           as asperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+      </aside>
+      <aside
+        className="analyze__note-bottom"
+      >
+        <p
+          className="analyze__note__text"
+        >
+           provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+      </aside>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should render analyze page correctly before and after submition  2`] = `
+<Fragment>
+  <ConnectFunction />
+  <div
+    className="analyze row"
+  >
+    <div
+      className="col-12 col-lg-8 analyze__loader"
+    >
+      <HeartLoader />
+    </div>
+    <div
+      className=" col-12  col-lg-3"
+    >
+      <aside
+        className="analyze__note"
+      >
+        <p
+          className="analyze__note__text"
+        >
+           adi cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+          sasperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           as asperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           cumque earum provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+      </aside>
+      <aside
+        className="analyze__note-bottom"
+      >
+        <p
+          className="analyze__note__text"
+        >
+           provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+        <p
+          className="analyze__note__text"
+        >
+           provident sint accusantium odit, eveniet animi perferendis.
+        </p>
+      </aside>
+    </div>
+  </div>
+</Fragment>
+`;
