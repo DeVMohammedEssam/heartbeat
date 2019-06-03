@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from "./layout/Navbar";
+import {sendNotification} from "../redux/actions/index"
 class BroadCast extends Component {
     state = {
         sendNowClicked: false
@@ -7,7 +8,11 @@ class BroadCast extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState(() => ({ sendNowClicked: true }));
-        setTimeout(()=> this.setState(()=>({sendNowClicked:false})),2000);
+ /*
+        this.props.dispatch(sendNotification(data)).then(()=>{
+ this.setState({sendNowClicked:false})
+        })
+*/
     }
     render() {
         return (
@@ -27,7 +32,7 @@ class BroadCast extends Component {
 
                                 <select name="sentTo" className=" custom-btn btn--darkGrey">
                                     <option value="patients">patients</option>
-                                    <option value="doctors">doctors</option>
+                                    <option value="doctors">negative people</option>
                                 </select>
                                 <span className="subtitle">message will be sent to: 26,381 users</span>
                             </div>

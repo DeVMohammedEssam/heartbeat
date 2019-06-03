@@ -30,7 +30,7 @@ class SignForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         if (this.props.sign === "up") {
-            axios.post("https://3c61062f.ngrok.io/api/user/signup", { data: this.state.data })
+            axios.post("http://127.0.0.1:5000/api/user/signup", { data: this.state.data })
                 .then(data => {
                     if (data.data.success) {
                         this.setState(() => ({ success: "you Signed up successfully please login :)" }));
@@ -44,12 +44,14 @@ class SignForm extends Component {
 
 
         } else {//if the page was login
-            axios.post("https://3c61062f.ngrok.io/api/user/login", { data: this.state.data })
+            axios.post("http://127.0.0.1:5000/api/user/login", { data: this.state.data })
                 .then(data => {
                     if (data.data.success) {
                         localStorage.setItem("userToken", data.data.token);
-                        this.props.dispatch(login());
-                        this.props.history.push("/analyze");
+                        this.props.dispatch(login()).then(()=>{
+                            this.props.history.push("/analyze");
+                        })
+                        
                     } else {
                         this.setState(() => ({ error: "wrong email or password" }))
                     }

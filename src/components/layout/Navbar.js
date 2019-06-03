@@ -29,6 +29,8 @@ class Navbar extends Component {
                                 <span className="custom-navbar__page-title">
                                     title<span>|</span>title
                                 </span>
+
+
                                 <div className="custom-navbar__notification">
                                     <i className="fas fa-bell"></i>
                                     <span className="badge badge-pill count">5</span>

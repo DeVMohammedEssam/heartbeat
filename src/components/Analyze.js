@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './layout/Navbar';
 import HeartLoader from "./layout/HeartLoader";
+import {startAnalyze} from "../redux/actions/index"
 class Analyze extends Component {
     state = {
         analyzeClicked: false
@@ -9,6 +10,11 @@ class Analyze extends Component {
 
         e.preventDefault();
         this.setState(() => ({ analyzeClicked: true }));//show loader
+     /*   startAnalyze().then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
+
+           this.setState(() => ({ analyzeClicked: false })); 
+        })
+        */
 
     }
     render() {
