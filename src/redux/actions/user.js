@@ -21,8 +21,8 @@ export const innerLogin = (userData) => ({
 export const login = () => {
     return dispatch => {
         let userData;
-        //   axios.defaults.headers.common['Authorization'] = localStorage.getItem("userToken");
-        axios.get("https://3c61062f.ngrok.io/api/user/").then(data => {
+        axios.defaults.headers.common['Authorization'] = localStorage.getItem("userToken");
+        return axios.get("http://127.0.0.1:5000/api/user/").then(data => {
             userData = data.data.user;
             dispatch(innerLogin(userData));
         })

@@ -26,7 +26,7 @@
         background-color: $white;
         padding: 6rem;
         border-radius: $borderRadius-lg;
-
+     
         .reading {
             border-bottom: 1px solid $darkGrey;
             padding: 1rem;
@@ -37,8 +37,14 @@
 
             &__text {
                 margin-right: 10rem;
+                display: inline;
+              
                 color: $darkGrey;
             }
+            &__percentage{
+                float: right
+            }
+            
         }
 
     }

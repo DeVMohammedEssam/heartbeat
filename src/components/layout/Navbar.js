@@ -29,10 +29,19 @@ class Navbar extends Component {
                                 <span className="custom-navbar__page-title">
                                     title<span>|</span>title
                                 </span>
-                                <div className="custom-navbar__notification">
-                                    <i className="fas fa-bell"></i>
-                                    <span className="badge badge-pill count">5</span>
+
+                                <div class="dropdown">
+                                    <button class="btn  dropdown-toggle custom-navbar__notification" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span className="badge badge-pill count">5</span>
+                                        <i className="fas fa-bell"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">notification 1</a>
+                                        <a class="dropdown-item" href="#">notification 2</a>
+                                        <a class="dropdown-item" href="#">notification 3</a>
+                                    </div>
                                 </div>
+
 
                                 <div className="info">
                                     <span className="username">{this.props.user.email}</span>
