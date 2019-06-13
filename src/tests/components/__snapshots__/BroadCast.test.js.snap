@@ -46,7 +46,7 @@ exports[`should render BroadCast component correctly after submitting the form 1
             <option
               value="doctors"
             >
-              doctors
+              negative people
             </option>
           </select>
           <span
@@ -112,7 +112,7 @@ exports[`should render BroadCast component correctly before submitting the form 
             <option
               value="doctors"
             >
-              doctors
+              negative people
             </option>
           </select>
           <span

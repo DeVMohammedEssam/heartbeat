@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render hearbearloadr component correctly 1`] = `
+<div
+  className="heart-loader"
+>
+  <div
+    className="heart-loader__animation-container"
+  >
+    <span
+      className="heart-loader__dashes"
+    />
+    <span
+      className="rotator"
+    />
+    <div
+      className="heart-loader__img-container"
+    >
+      <img
+        alt=""
+        src="/images/heart-icon.png"
+      />
+    </div>
+  </div>
+</div>
+`;
