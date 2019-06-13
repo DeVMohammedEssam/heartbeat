@@ -15,10 +15,10 @@ class Notifications extends Component {
             <React.Fragment>
                 <Navbar />
                 <section className="notifications">
-                    <h3 className="notifications__title">Notifications</h3>
+                    <h3 className="notifications__title">           {this.props.user.type === 1 ?"broadcast history":"Notifications"}</h3>
                     <div className="notifications__list">
                         {this.state.notifications.map((notification)=>(
-                        <NotificationCard sender={notification.from} message={notification.message} />
+                        <NotificationCard sender={notification.from.email} message={notification.message} />
                         ))}
                     
                     </div>
@@ -27,5 +27,8 @@ class Notifications extends Component {
         );
     }
 }
+const mapStateToProps=(state)=>({
+    user:state.user
+})
 
-export default connect()(Notifications);
+export default connect(mapStateToProps)(Notifications);
