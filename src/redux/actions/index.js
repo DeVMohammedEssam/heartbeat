@@ -28,3 +28,12 @@ export const sendNotification=(data)=>{
         return axios.post(url+"send-notification",{data})
     }
 }
+export const addNotification=(data)=>(
+{
+    type:"ADD_NOTI",
+    data
+}
+
+)
+
+

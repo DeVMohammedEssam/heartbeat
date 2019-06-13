@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import Navbar from "./layout/Navbar";
 import { sendNotification } from "../redux/actions/index"
+import {connect} from "react-redux"
 class BroadCast extends Component {
     state = {
         sendNowClicked: false,
         broadcast: {
             message: "",
-            sendTo: "patients"
+            result: "1"
         }
     }
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState(() => ({ sendNowClicked: true }));
-        setTimeout(() => this.setState(() => ({ sendNowClicked: false })), 2000);
+     this.props.dispatch(sendNotification(this.state.broadcast)).then(()=>{
+        this.setState({sendNowClicked:false})
+               })
+       
     }
     handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,11 +25,8 @@ class BroadCast extends Component {
                 ...this.state.broadcast, [name]: value
             }
         })
-        /*
-               this.props.dispatch(sendNotification(data)).then(()=>{
-        this.setState({sendNowClicked:false})
-               })
-       */
+        
+          
     }
     render() {
         return (
@@ -43,9 +44,9 @@ class BroadCast extends Component {
                         <div className="broadcast__send-to ">
                             <div className="wrapper">
 
-                                <select name="sendTo" className=" custom-btn btn--darkGrey" onChange={this.handleChange} defaultValue={this.state.broadcast.sendTo}>
-                                    <option value="patients">patients</option>
-                                    <option value="doctors">negative people</option>
+                                <select name="result" className=" custom-btn btn--darkGrey" onChange={this.handleChange} defaultValue={this.state.broadcast.sendTo}>
+                                    <option selected value="1">patients</option>
+                                    <option value="0">negative people</option>
                                 </select>
                                 <span className="subtitle">message will be sent to: 26,381 users</span>
                             </div>
@@ -58,4 +59,4 @@ class BroadCast extends Component {
     }
 }
 
-export default BroadCast;
+export default connect()(BroadCast);

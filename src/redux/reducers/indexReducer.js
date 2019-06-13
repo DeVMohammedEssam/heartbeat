@@ -1,8 +1,11 @@
-const userReducer = (state = {}, action) => {
+const userReducer = (state = {notifications:[]}, action) => {
     switch (action.type) {
-        case "ANALYZE":
-            return { ...action.userData };
-     
+        case "ADD_NOTI":
+            if(state.notifications.length<3){
+                state.notifications.push(action.data)
+            }
+            return { ...state };
+            
         default: return state;
     }
 }
