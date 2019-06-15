@@ -4,6 +4,7 @@ exports[`should render sign in form when making sign prop equal in 1`] = `
 <div>
   <form
     className="sign-form"
+    noValidate={true}
     onSubmit={[Function]}
   >
     <div
@@ -23,6 +24,15 @@ exports[`should render sign in form when making sign prop equal in 1`] = `
         name="password"
         onChange={[Function]}
         placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="password2"
+        onChange={[Function]}
+        placeholder="confirm password"
         required={true}
         type="password"
         value=""
@@ -54,6 +64,7 @@ exports[`should render sign up form when making sign prop equal up 1`] = `
 <div>
   <form
     className="sign-form"
+    noValidate={true}
     onSubmit={[Function]}
   >
     <div
@@ -73,6 +84,15 @@ exports[`should render sign up form when making sign prop equal up 1`] = `
         name="password"
         onChange={[Function]}
         placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="password2"
+        onChange={[Function]}
+        placeholder="confirm password"
         required={true}
         type="password"
         value=""

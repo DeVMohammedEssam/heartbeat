@@ -20,12 +20,13 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "socket.io-client": "^2.2.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "validator": "^11.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watch --coverage [--config=jest.config.json]",
+    "test": "react-scripts test --watch  [--config=jest.config.json]",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

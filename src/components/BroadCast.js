@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./layout/Navbar";
 import { sendNotification } from "../redux/actions/index"
 import {connect} from "react-redux"
-class BroadCast extends Component {
+export class BroadCast extends Component {
     state = {
         sendNowClicked: false,
         broadcast: {

@@ -1,71 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render BroadCast component correctly after submitting the form 1`] = `
-<Fragment>
-  <ConnectFunction />
-  <form
-    className="broadcast"
-    onSubmit={[Function]}
-  >
-    <h3
-      className="broadcast__title"
-    >
-      Broadcast
-    </h3>
-    <div
-      className="broadcast__content"
-    >
-      <div
-        className="broadcast__textbox"
-      >
-        <textarea
-          className="custom-input"
-          name="message"
-          onChange={[Function]}
-          placeholder="Send message"
-          value=""
-        />
-      </div>
-      <div
-        className="broadcast__send-to "
-      >
-        <div
-          className="wrapper"
-        >
-          <select
-            className=" custom-btn btn--darkGrey"
-            defaultValue="patients"
-            name="sendTo"
-            onChange={[Function]}
-          >
-            <option
-              value="patients"
-            >
-              patients
-            </option>
-            <option
-              value="doctors"
-            >
-              negative people
-            </option>
-          </select>
-          <span
-            className="subtitle"
-          >
-            message will be sent to: 26,381 users
-          </span>
-        </div>
-        <input
-          className="broadcast__send-now custom-input "
-          type="submit"
-          value="Send Now"
-        />
-      </div>
-    </div>
-  </form>
-</Fragment>
-`;
-
 exports[`should render BroadCast component correctly before submitting the form 1`] = `
 <Fragment>
   <ConnectFunction />
@@ -100,17 +34,17 @@ exports[`should render BroadCast component correctly before submitting the form 
         >
           <select
             className=" custom-btn btn--darkGrey"
-            defaultValue="patients"
-            name="sendTo"
+            name="result"
             onChange={[Function]}
           >
             <option
-              value="patients"
+              selected={true}
+              value="1"
             >
               patients
             </option>
             <option
-              value="doctors"
+              value="0"
             >
               negative people
             </option>

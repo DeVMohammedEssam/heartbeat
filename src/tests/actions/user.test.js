@@ -1,9 +1,4 @@
 import { signUp, logout, innerLogin, login } from "../../redux/actions/user";
-import moxios from "moxios";
-import configureMockStore from "redux-mock-store";
-import thunk from "redux-thunk";
-import Axios from "axios";
-const mockStore = configureMockStore([thunk]);
 test("should return sign up action object", () => {
     const userData = {
         name: "mohammed",
@@ -35,23 +30,4 @@ test("should return inner login action object", () => {
         }
     })
 })
-beforeEach(() => {
-    moxios.install(Axios);
-})
-afterEach(() => {
-    moxios.uninstall(Axios);
 
-})
-
-
-
-test("should make a request to get user data and dispatch it", async () => {
-    moxios.stubRequest('https://3c61062f.ngrok.io/api/user/', {
-        status: 200,
-        response: { userToken: "A1B2C3" }
-    })
-    const store = mockStore({});
-    await store.dispatch(login());
-    const actions = await store.getActions();
-
-})
