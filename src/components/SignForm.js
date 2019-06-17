@@ -117,15 +117,7 @@ export class SignForm extends Component {
               onChange={this.handleInputChange}
               required
             />
-            <input
-              className="custom-input"
-              type="password"
-              name="password2"
-              placeholder="confirm password"
-              value={this.state.data.password2}
-              onChange={this.handleInputChange}
-              required
-            />
+
             {this.props.sign === "up" && (
               <React.Fragment>
                 <input
@@ -134,6 +126,15 @@ export class SignForm extends Component {
                   name="name"
                   placeholder="Name"
                   value={this.state.data.name}
+                  onChange={this.handleInputChange}
+                  required
+                />
+                <input
+                  className="custom-input"
+                  type="password"
+                  name="password2"
+                  placeholder="confirm password"
+                  value={this.state.data.password2}
                   onChange={this.handleInputChange}
                   required
                 />
