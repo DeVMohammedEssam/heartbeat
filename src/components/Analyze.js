@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './layout/Navbar';
 import HeartLoader from "./layout/HeartLoader";
 import { startAnalyze } from "../redux/actions/index"
+import {connect} from "react-redux"
 class Analyze extends Component {
     state = {
         analyzeClicked: false,
@@ -24,10 +25,10 @@ class Analyze extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState(() => ({ analyzeClicked: true }));//show loader
-        /*       this.props.dispatch(startAnalyze(this.state.data)).then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
+           this.props.dispatch(startAnalyze(this.state.data)).then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
         
                    this.setState(() => ({ analyzeClicked: false })); 
-                }) */
+     }) 
 
 
     }
@@ -90,4 +91,4 @@ class Analyze extends Component {
     }
 }
 
-export default Analyze;
+export default connect()(Analyze);
