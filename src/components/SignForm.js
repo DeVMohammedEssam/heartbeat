@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../redux/actions/user";
+import { url } from "../config";
 import axios from "axios";
 import validateLoginInputs from "../validation/login";
 import validateRegisterInputs from "../validation/register";
@@ -35,7 +36,7 @@ export class SignForm extends Component {
       if (!isValid) this.setState(() => ({ errors }));
       else {
         axios
-          .post("http://127.0.0.1:5000/api/user/signup", {
+          .post(`${url}/api/user/signup`, {
             data: this.state.data
           })
           .then(data => {
