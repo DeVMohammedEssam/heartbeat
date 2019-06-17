@@ -1,36 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./layout/Navbar";
 import HeartLoader from "./layout/HeartLoader";
-<<<<<<< HEAD
-import { startAnalyze } from "../redux/actions/index"
 import {connect} from "react-redux"
-class Analyze extends Component {
-    state = {
-        analyzeClicked: false,
-        data: {
-            age: "",
-            sex: "male",
-            cp: "",
-            trestbps: "",
-            chol: "",
-            fbs: "",
-            restecg: "",
-            thalach: "",
-            exang: "",
-            oldpeak: "",
-            slope: "",
-            ca: "",
-            thal: ""
-        }
-    }
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.setState(() => ({ analyzeClicked: true }));//show loader
-           this.props.dispatch(startAnalyze(this.state.data)).then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
-        
-                   this.setState(() => ({ analyzeClicked: false })); 
-     }) 
-=======
 import { startAnalyze } from "../redux/actions/index";
 import validateAnalyzeInputs from "../validation/analyze";
 export class Analyze extends Component {
@@ -56,17 +27,16 @@ export class Analyze extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { isValid, errors } = validateAnalyzeInputs(this.state.data);
->>>>>>> ae8f7670d267336bc2a3a29628198ea0c3d34cef
 
     if (!isValid) {
       this.setState(() => ({ errors }));
     } else {
       this.setState(() => ({ analyzeClicked: true })); //show loader
 
-      /*       this.props.dispatch(startAnalyze(this.state.data)).then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
+    this.props.dispatch(startAnalyze(this.state.data)).then(()=>{  //Add Analyze Data to StartAnalyze Function as one param
             
                        this.setState(() => ({ analyzeClicked: false })); 
-                    }) */
+                    }) 
     }
   };
   handleChange = e => {
@@ -247,8 +217,4 @@ export class Analyze extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default connect()(Analyze);
-=======
-export default Analyze;
->>>>>>> ae8f7670d267336bc2a3a29628198ea0c3d34cef

@@ -19,6 +19,7 @@ class App extends Component {
 
 
  }
+
  componentDidMount(){
     let socket=openSocket("http://localhost:8080",{ secure: true });
       socket.on("test",(data)=>{

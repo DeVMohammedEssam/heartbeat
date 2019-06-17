@@ -1,4 +1,6 @@
 import axios from "axios";
+import {url} from "../../config"
+
 export const signUp = (userData) => ({
     type: "SIGN_UP",
     userData
@@ -22,7 +24,7 @@ export const login = () => {
     return dispatch => {
         let userData;
         axios.defaults.headers.common['Authorization'] = localStorage.getItem("userToken");
-        return axios.get("http://127.0.0.1:5000/api/user/").then(data => {
+        return axios.get(url+"user/").then(data => {
             userData = data.data.user;
             dispatch(innerLogin(userData));
         })

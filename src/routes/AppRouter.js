@@ -9,16 +9,21 @@ import BroadCast from "../components/BroadCast";
 import SignForm from "../components/SignForm";
 import ProtectedRoute from "../components/ProtectedRoute";
 import PageNotFound from "../components/PageNotFound";
+import Privacy from "../components/Privacy"
+import HowToUse from "../components/HowToUse"
 const AppRouter = () => {
   return (
     <React.Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/analyze" component={Analyze} />
+        <ProtectedRoute path="/analyze" component={Analyze} />
         <ProtectedRoute path="/history" component={History} />
         <ProtectedRoute path="/notifications" component={Notifications} />
-        <Route path="/analysis" component={Analysis} />
-        <Route path="/broadcast" component={BroadCast} />
+        <ProtectedRoute path="/analysis" component={Analysis} />
+        <ProtectedRoute path="/broadcast" component={BroadCast} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/how-to-use" component={HowToUse} />
+
         <Route path="/signin" render={() => <SignForm sign="in" />} />
         <Route path="/signup" render={() => <SignForm sign="up" />} />
         <Route component={PageNotFound} />

@@ -7,7 +7,7 @@ const analyze=(data)=>({
 export const startAnalyze=(data)=>{
     return (dispatch)=>
     {
-        return axios.post(url+"analyze").then((response)=>{
+        return axios.post(url+"analyze",{data}).then((response)=>{
             dispatch(analyze(response.data))
         })
     }
@@ -28,12 +28,12 @@ export const sendNotification=(data)=>{
         return axios.post(url+"send-notification",{data})
     }
 }
-export const addNotification=(data)=>(
-{
+export const addNotification=(data)=>{
+    console.log("ADD NOTI ",data);
+    return {
     type:"ADD_NOTI",
     data
 }
-
-)
+}
 
 

@@ -36,7 +36,7 @@ export class SignForm extends Component {
       if (!isValid) this.setState(() => ({ errors }));
       else {
         axios
-          .post(`${url}/api/user/signup`, {
+          .post(`${url}user/signup`, {
             data: this.state.data
           })
           .then(data => {
@@ -66,7 +66,7 @@ export class SignForm extends Component {
       } else {
         //sending login request
         axios
-          .post("http://127.0.0.1:5000/api/user/login", {
+          .post(`${url}user/login`, {
             data: this.state.data
           })
           .then(data => {

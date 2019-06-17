@@ -11,13 +11,18 @@ export class Navbar extends Component {
 
   handleLogout = () => {
     localStorage.removeItem("userToken");
+    this.setState({isSignedIn:false})
     this.props.dispatch(logout());
     this.props.history.push("/");
   };
-  /*   static getDerivedStateFromProps(props, state) {
 
-    return { notifications: props.index.notifications };
-  } */
+   static getDerivedStateFromProps(props, state) {
+      if(props.user!=state.user){
+        console.log("PROPS ",props)
+        return {...state,isSignedIn:Object.keys(props.user).length>0,notifications:props.index.notifications}
+      }
+  
+  } 
   render() {
     return (
       <span>
@@ -25,7 +30,7 @@ export class Navbar extends Component {
           <div className="custom-navbar__logo-container">
             <img
               className="custom-navbar__logo"
-              src="http://placehold.it/100/100"
+              src="images/heart-icon.png "
               alt=""
             />
           </div>
@@ -36,11 +41,11 @@ export class Navbar extends Component {
               </Link>
               <span className="custom-navbar__vertical-line" />
 
-              <Link className="custom-navbar__link" to="/">
+              <Link className="custom-navbar__link" to="/how-to-use">
                 How To use{" "}
               </Link>
               <span className="custom-navbar__vertical-line" />
-              <Link className="custom-navbar__link" to="/">
+              <Link className="custom-navbar__link" to="/privacy">
                 privacy{" "}
               </Link>
             </div>
@@ -112,6 +117,7 @@ export class Navbar extends Component {
             )}
           </div>
         </nav>
+        {!this.state.isSignedIn?"":
         <nav className="dashnavbar">
           <ul class="nav justify-content-center">
             {this.props.user.type === 0 && (
@@ -173,6 +179,9 @@ export class Navbar extends Component {
             )}
           </ul>
         </nav>
+        
+        }
+        
       </span>
     );
   }

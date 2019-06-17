@@ -5,6 +5,7 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
+                
                 <Navbar />
                 <div className="home">
                     <div className="home__cover"></div>

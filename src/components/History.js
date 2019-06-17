@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResultCard from "./layout/ResultCard";
 import { connect } from "react-redux"
+
 import Navbar from './layout/Navbar';
 import { startGetHistory } from "../redux/actions/index"
 class History extends Component {
@@ -23,7 +24,7 @@ class History extends Component {
 
                                 {this.state.analysis.map((analyze) => (
 
-                                    <ResultCard status={analyze.result ? "success" : "fail"} date={() => { return analyze.date.getFullYear() + "/" + analyze.date.getMonth() + "/" + analyze.date.getDay() }} />
+                                    <ResultCard status={!analyze.result>=0.5 ? "success" : "fail"} date={new Date(analyze.created_date).getFullYear() + "/" + new Date(analyze.created_date).getMonth() + "/" + new Date(analyze.created_date).getDay() } />
 
                                 ))}
 
@@ -34,6 +35,8 @@ class History extends Component {
                                 {this.state.analysis.map((analyze) => (
                                     <div className="reading">
                                         <div className="row">
+                                        
+
                                             <div className="col-md-3">
                                                 <p className="reading__text"> age</p> <span className="reading__percentage">{analyze.age}</span>
                                             </div>
@@ -49,6 +52,14 @@ class History extends Component {
                                             <div className="col-md-3">  <p className="reading__text"> cas</p> <span className="reading__percentage">{analyze.cas}</span>   </div>
                                             <div className="col-md-3">  <p className="reading__text"> thal</p> <span className="reading__percentage">{analyze.thal}</span>   </div>
                                             <div className="col-md-3"> <p className="reading__text"> class</p> <span className="reading__percentage">{analyze.class}</span>   </div>
+                                                                                 <div className="col-md-3"> <p className="reading__text"> result</p> <span className="reading__percentage">{analyze.result*100}%</span>   </div>
+
+                                          <div className="col-md-12 text-right" style={{"color":"grey"}}>
+
+                                            <h3>{ new Date(analyze.created_date).getFullYear() + "/" + new Date(analyze.created_date).getMonth() + "/" + new Date(analyze.created_date).getDay() }</h3>
+
+                                            </div>
+                                       
                                         </div>
 
 
