@@ -149,7 +149,8 @@ exports[`should render analyze page correctly before and after submition  1`] = 
         <p
           className="analyze__note__text"
         >
-           adi cumque earum provident sint accusantium odit, eveniet animi perferendis.
+           
+          adi cumque earum provident sint accusantium odit, eveniet animi perferendis.
         </p>
         <p
           className="analyze__note__text"
@@ -159,12 +160,14 @@ exports[`should render analyze page correctly before and after submition  1`] = 
         <p
           className="analyze__note__text"
         >
-           as asperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
+           
+          as asperiores cumque earum provident sint accusantium odit, eveniet animi perferendis.
         </p>
         <p
           className="analyze__note__text"
         >
-           cumque earum provident sint accusantium odit, eveniet animi perferendis.
+           
+          cumque earum provident sint accusantium odit, eveniet animi perferendis.
         </p>
       </aside>
       <aside
@@ -173,12 +176,14 @@ exports[`should render analyze page correctly before and after submition  1`] = 
         <p
           className="analyze__note__text"
         >
-           provident sint accusantium odit, eveniet animi perferendis.
+           
+          provident sint accusantium odit, eveniet animi perferendis.
         </p>
         <p
           className="analyze__note__text"
         >
-           provident sint accusantium odit, eveniet animi perferendis.
+           
+          provident sint accusantium odit, eveniet animi perferendis.
         </p>
       </aside>
     </div>

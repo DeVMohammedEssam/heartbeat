@@ -28,15 +28,6 @@ exports[`should render sign in form when making sign prop equal in 1`] = `
         type="password"
         value=""
       />
-      <input
-        className="custom-input"
-        name="password2"
-        onChange={[Function]}
-        placeholder="confirm password"
-        required={true}
-        type="password"
-        value=""
-      />
       <div
         className="btns-wrapper"
       >
@@ -90,20 +81,20 @@ exports[`should render sign up form when making sign prop equal up 1`] = `
       />
       <input
         className="custom-input"
-        name="password2"
-        onChange={[Function]}
-        placeholder="confirm password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <input
-        className="custom-input"
         name="name"
         onChange={[Function]}
         placeholder="Name"
         required={true}
         type="name"
+        value=""
+      />
+      <input
+        className="custom-input"
+        name="password2"
+        onChange={[Function]}
+        placeholder="confirm password"
+        required={true}
+        type="password"
         value=""
       />
       <select
